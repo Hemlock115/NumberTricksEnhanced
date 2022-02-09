@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Tricks</title>
+
+
+    <script>
+       //Matt Hemlock and 2/2/2022
+        let entry;
+        let total = 0;
+
+        document.write("<h1>The Number Game</h1>");
+        document.write(" <img src='Lucky7.jfif' alt=''> <br><br>");
+        //Get the users number
+        //entry = parseInt(prompt("Enter a whole number")); 
+        entry = parseInt(prompt("Enter a whole number")); 
+
+        if(isNaN(entry)){
+            do{
+                alert("Must be a whole number");
+                entry = parseInt(prompt("Enter a whole number")); 
+            }
+            while(isNaN(entry))
+        }   
+    //Compute lucky 7    
+    total = entry+9; //Add 9
+    document.write("The number you selected is " + entry + "<br> plus 9 = " + total + "<br>");
+    total = total*2; //Multiply by 2
+    document.write("multiplied by 2 = " + total + "<br>");
+    total = total-4; //Subtract by 4
+    document.write("subtracted by 4 = " + total + "<br>");
+    total = total/2; //Divide by 2
+    document.write("divided by 2 = " + total + "<br>");
+    total = total-entry; //Subtract by the Users number picked
+
+    //Adding an alert to display the computed value which should equal 7
+    alert(("Your total number is = " + total));
+    document.write("<br> <SPAN STYLE='font-weight:bold'> Your final number = " + total + "!<br> </span>");
+    </script>
+</head>
+<body>
+   
+    <p>Thanks for playing!</p>
+    <a href="javascript:window.location.reload();" >Press here to play again!</a>
+</body>
+</html>
